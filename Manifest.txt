@@ -1,0 +1,7 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+lib/ansel_iconv.rb
+test/ansel_iconv_test.rb
+test/test_helper.rb
