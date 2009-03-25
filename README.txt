@@ -1,6 +1,6 @@
 = ANSEL::Iconv
 
-http://github.com/infused/ansel-iconv/tree/master
+http://github.com/infused/ansel_iconv/tree/master
 
 == DESCRIPTION:
 
@@ -8,7 +8,7 @@ Convert ANSEL encoded text to any other encoding available to Iconv
 
 == INSTALL:
 
-  gem install infused-ansel-iconv --source http://gems.github.com
+  gem install infused-ansel_iconv --source http://gems.github.com
   
 
 == LICENSE:
