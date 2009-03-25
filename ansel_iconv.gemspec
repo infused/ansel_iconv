@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 Gem::Specification.new do |s|
   s.name = %q{ansel_iconv}
   s.version = "1.0.1"
@@ -7,10 +9,10 @@ Gem::Specification.new do |s|
   s.date = %q{2009-03-25}
   s.description = %q{Convert ANSEL encoded text to any other encoding available to Iconv}
   s.email = %q{keithm@infused.org}
-  s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "lib/ansel_iconv.rb", "test/ansel_iconv_test.rb", "test/test_helper.rb"]
+  s.extra_rdoc_files = ["README.txt"]
+  s.files = ["History.txt", "README.txt", "VERSION.yml", "lib/ansel_iconv.rb", "test/ansel_iconv_test.rb", "test/test_helper.rb"]
   s.has_rdoc = true
-  s.homepage = ["http://github.com/infused/ansel-iconv/tree/master"]
-  s.rdoc_options = ["--main", "README.txt"]
+  s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{Convert ANSEL encoded text}

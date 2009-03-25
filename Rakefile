@@ -4,13 +4,12 @@ $: << File.join(PROJECT_ROOT, 'lib')
 require 'rubygems'
 require 'ansel_iconv'
 require 'rake/testtask'
-require 'trowel'
+require 'jeweler'
 
-Trowel.define_tasks do |p|
+Jeweler::Tasks.new do |p|
   p.name = 'ansel_iconv'
   p.description = 'Convert ANSEL encoded text to any other encoding available to Iconv'
   p.summary = 'Convert ANSEL encoded text'
-  p.version = '1.0.1'
   p.platform = Gem::Platform::RUBY
   p.authors = ['Keith Morrison']
   p.email = 'keithm@infused.org'
