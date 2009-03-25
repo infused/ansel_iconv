@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name = %q{ansel_iconv}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Keith Morrison"]
-  s.date = %q{2009-03-23}
+  s.date = %q{2009-03-25}
   s.description = %q{Convert ANSEL encoded text to any other encoding available to Iconv}
   s.email = %q{keithm@infused.org}
   s.files = ["History.txt", "Manifest.txt", "README.txt", "Rakefile", "lib/ansel_iconv.rb", "test/ansel_iconv_test.rb", "test/test_helper.rb"]
