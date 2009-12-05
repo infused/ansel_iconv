@@ -14,6 +14,7 @@ Jeweler::Tasks.new do |p|
   p.authors = ['Keith Morrison']
   p.email = 'keithm@infused.org'
   p.add_dependency(%q<activesupport>, [">= 2.1.0"])
+  p.homepage = 'http://github.com/infused/ansel_iconv'
 end
 
 Jeweler::GemcutterTasks.new

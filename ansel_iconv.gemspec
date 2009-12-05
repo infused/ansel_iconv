@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "test/ansel_iconv_test.rb",
      "test/test_helper.rb"
   ]
+  s.homepage = %q{http://github.com/infused/ansel_iconv}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}
