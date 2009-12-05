@@ -16,6 +16,8 @@ Jeweler::Tasks.new do |p|
   p.add_dependency(%q<activesupport>, [">= 2.1.0"])
 end
 
+Jeweler::GemcutterTasks.new
+
 desc 'Default: run unit tests.'
 task :default => :test
 
