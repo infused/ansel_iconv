@@ -1,9 +1,8 @@
 # ANSEL::Iconv
 
-ANSEL::Iconv is a wrapper for Iconv that adds ANSEL character set conversion to
-any other encoding supported by Iconv.
+ANSEL::Iconv is a wrapper for Iconv that adds ANSEL character set conversion.
 
-Copyright (c) 2006-2009 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
+Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
 
 * Project page: <http://github.com/infused/ansel_iconv>
 * API Documentation: <http://rdoc.info/projects/infused/dbf>
@@ -18,7 +17,7 @@ Copyright (c) 2006-2009 Keith Morrison <mailto:keithm@infused.org>, <http://www.
 ## Basic Usage
 
 Conversion from ANSEL to any other encoding is fully supported, but you cannot 
-currently convert to ANSEL from another encoding. Two-way encoding will be addded
+currently convert to ANSEL from another encoding. Two-way encoding will be added
 in a future release.
     
     require 'ansel_iconv'
@@ -29,21 +28,19 @@ in a future release.
   
 ## About the ANSEL character set
 
-ANSI/NISO Z39.47 also known as ANSEL is a character set encoding used 
-primarily for bibliographic and genealogical data. It is also one of the 
-official character encodings supported by the
-[Gedcom 5.5](http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gctoc.htm)
-standard. 
-
-More information can be found at the
-[Official NISO standard](http://www.niso.org/kst/reports/standards?step=2&gid%3Austring%3Aiso-8859-1=&project_key%3Austring%3Aiso-8859-1=0b5d2bd7b690b60fcc75cde9256ed9f9e526e531)
-page.
+[ANSI/NISO
+Z39.47](http://www.niso.org/kst/reports/standards?step=2&gid%3Austring%3Aiso-8859-1=&project_key%3Austring%3Aiso-8859-1=0b5d2bd7b690b60fcc75cde9256ed9f9e526e531),
+also known as ANSEL, is a character set encoding used primarily for
+bibliographic and genealogical data. It is one of the official character
+encodings supported by the [Gedcom
+5.5](http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gctoc.htm)
+standard.
 
 ## LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2006-2009 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
+Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
