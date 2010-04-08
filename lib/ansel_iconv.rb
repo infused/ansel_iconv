@@ -1,3 +1,5 @@
+# encoding: ascii-8bit
+
 gem 'activesupport', '=2.3.5'
 require 'active_support'
 require 'iconv'
@@ -588,15 +590,15 @@ module ANSEL
       until scanner.eos? do
         byte = scanner.get_byte
       
-        if byte[0] <= 0x7F
+        if byte.unpack('C')[0] <= 0x7F
           output << byte
-        elsif byte[0] >= 0x88 && byte[0] <= 0xC8
-          hex_key = byte[0].to_s(16).upcase
+        elsif byte.unpack('C')[0] >= 0x88 && byte.unpack('C')[0] <= 0xC8
+          hex_key = byte.unpack('C')[0].to_s(16).upcase
           output << ::Iconv.conv(@to_charset, 'UTF-16', @ansi_to_utf8.has_key?(hex_key) ? @ansi_to_utf8[hex_key] : @ansi_to_utf8['ERR'])
           scanner.get_byte # ignore the next byte
-        elsif byte[0] >= 0xE0 && byte[0] <= 0xFB
+        elsif byte.unpack('C')[0] >= 0xE0 && byte.unpack('C')[0] <= 0xFB
           [2, 1, 0].each do |n| # try 3 bytes, then 2 bytes, then 1 byte
-            bytes = [byte[0].to_s(16).upcase]
+            bytes = [byte.unpack('C')[0].to_s(16).upcase]
             scanner.peek(n).each_byte {|b| bytes << b.to_s(16).upcase}
             hex_key = bytes.join("+")
             if @ansi_to_utf8.has_key?(hex_key)  
@@ -607,7 +609,7 @@ module ANSEL
           end
         else
           output << ::Iconv.conv(@to_charset, 'UTF-16', @ansi_to_utf8['ERR'])
-          scanner.get_byte if scanner.get_byte[0] >= 0xE0 # ignore the next byte
+          scanner.get_byte if scanner.get_byte.unpack('C')[0] >= 0xE0 # ignore the next byte
         end
       end
     
