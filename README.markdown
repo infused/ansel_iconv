@@ -21,14 +21,21 @@ ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7 and 1.9.1
 ## Basic Usage
 
 Conversion from ANSEL to any other encoding is fully supported, but you cannot 
-currently convert to ANSEL from another encoding. Two-way encoding will be added
-in a future release.
+convert to ANSEL from another encoding. Two-way encoding may be added
+in the future.
     
     require 'ansel_iconv'
     
-    # Convert ANSEL to UTF-8
-    @ansel = ANSEL::Iconv.new 'UTF-8'
-    @ansel.iconv("\xB9\x004.59") # => "£4.59" 
+    # convert ANSEL to UTF-8
+    converter = ANSEL::Iconv.new 'UTF-8'
+    converter.iconv("\xB9\x004.59") # => "£4.59"
+    
+You can use ANSEL::Iconv as a replacement for the built-in Iconv, because
+non-ANSEL conversions are simply passed through to Iconv.
+
+    # convert UTF-8 to UTF-16
+    converter = ANSEL::Iconv.new 'UTF-16', 'UTF-8'
+    converter.iconv("£4.59") # => "\376\377\000\243\0004\000.\0005\0009"
   
 ## About the ANSEL character set
 
