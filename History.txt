@@ -1,3 +1,7 @@
+== 1.0.4
+
+* Requires activesupport 2.3.5 and works when 3.0 is installed
+
 == 1.0.3
 
 * Fix ActiveSupport deprecation warning

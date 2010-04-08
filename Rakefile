@@ -13,7 +13,7 @@ Jeweler::Tasks.new do |p|
   p.platform = Gem::Platform::RUBY
   p.authors = ['Keith Morrison']
   p.email = 'keithm@infused.org'
-  p.add_dependency(%q<activesupport>, [">= 2.1.0"])
+  p.add_dependency(%q<activesupport>, ['=2.3.5'])
   p.homepage = 'http://github.com/infused/ansel_iconv'
 end
 
