@@ -9,6 +9,10 @@ Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.
 * Report bugs: <http://github.com/infused/ansel_iconv/issues>
 * Questions? Email [keithm@infused.org](mailto:keithm@infused.org?subject=ANSEL::Iconv)
   with ANSEL::Iconv in the subject line
+  
+## Compatibility
+
+ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7 and 1.9.1
 
 ## Installation
 
