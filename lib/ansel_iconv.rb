@@ -616,20 +616,6 @@ module ANSEL
     
       @to_charset == 'UTF-8' ? output : ::Iconv.conv(@to_charset, 'UTF-8', output)
     end
-  
-    def convert_char(char)
-      return char if char.size <= 1 && char[0] <= 0x7f
-      
-      if char[0] > 0x7f && char[0] < 0xE0
-        hex_key = char[0].to_s(16).upcase
-      elsif char[0] >= 0xE0
-        bytes = []
-        char.each_byte {|byte| bytes << byte.to_s(16).upcase}
-        hex_key = bytes.join('+')
-      end
-      return ::Iconv.conv(@to_charset, 'UTF-16', @ansi_to_utf8.has_key?(hex_key) ? @ansi_to_utf8[hex_key] : @ansi_to_utf8['ERR'])
-    end
-  
+    
   end
-  
 end
