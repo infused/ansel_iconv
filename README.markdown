@@ -12,7 +12,7 @@ Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.
   
 ## Compatibility
 
-ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7 and 1.9.1
+ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7, and 1.9.2
 
 ## Installation
 
