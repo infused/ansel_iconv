@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   
   s.required_rubygems_version = '>= 1.3.0'
-  s.add_dependency(%q<activesupport>, ["= 2.3.5"])
+  s.add_dependency(%q<activesupport>, ['>= 2.3.5', '<=2.3.8'])
 end
 
