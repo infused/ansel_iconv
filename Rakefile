@@ -1,23 +1,9 @@
-PROJECT_ROOT = File.expand_path(File.dirname(__FILE__))
-$: << File.join(PROJECT_ROOT, 'lib')
+# encoding: utf-8
 
 require 'rubygems'
-require 'ansel_iconv'
+require 'rubygems/specification'
 require 'rake/testtask'
-require 'jeweler'
 
-Jeweler::Tasks.new do |p|
-  p.name = 'ansel_iconv'
-  p.description = 'Convert ANSEL encoded text to any other encoding available to Iconv'
-  p.summary = 'Convert ANSEL encoded text'
-  p.platform = Gem::Platform::RUBY
-  p.authors = ['Keith Morrison']
-  p.email = 'keithm@infused.org'
-  p.add_dependency(%q<activesupport>, ['=2.3.5'])
-  p.homepage = 'http://github.com/infused/ansel_iconv'
-end
-
-Jeweler::GemcutterTasks.new
 
 desc 'Default: run unit tests.'
 task :default => :test
@@ -27,3 +13,33 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
   t.libs << 'test'
 end
+
+def gemspec
+  @gemspec ||= begin
+    file = File.expand_path('../ansel_iconv.gemspec', __FILE__)
+    eval(File.read(file), binding, file)
+  end
+end
+
+begin
+  require 'rake/gempackagetask'
+rescue LoadError
+  task(:gem) { $stderr.puts '`gem install rake` to package gems' }
+else
+  Rake::GemPackageTask.new(gemspec) do |pkg|
+    pkg.gem_spec = gemspec
+  end
+  task :gem => :gemspec
+end
+
+desc "install the gem locally"
+task :install => :package do
+  sh %{gem install pkg/#{gemspec.name}-#{gemspec.version}}
+end
+
+desc "validate the gemspec"
+task :gemspec do
+  gemspec.validate
+end
+
+task :package => :gemspec
