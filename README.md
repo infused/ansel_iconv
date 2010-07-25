@@ -4,10 +4,10 @@ ANSEL::Iconv is a wrapper for Iconv that adds ANSEL character set conversion.
 
 Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
 
-* Project page: <http://github.com/infused/ansel_iconv>
-* API Documentation: <http://rdoc.info/projects/infused/dbf>
-* Report bugs: <http://github.com/infused/ansel_iconv/issues>
-* Questions? Email [keithm@infused.org](mailto:keithm@infused.org?subject=ANSEL::Iconv)
+- Project page: <http://github.com/infused/ansel_iconv>
+- API Documentation: <http://rdoc.info/projects/infused/dbf>
+- Report bugs: <http://github.com/infused/ansel_iconv/issues>
+- Questions? Email [keithm@infused.org](mailto:keithm@infused.org?subject=ANSEL::Iconv)
   with ANSEL::Iconv in the subject line
   
 ## Compatibility
@@ -49,9 +49,7 @@ standard.
 
 ## LICENSE:
 
-(The MIT License)
-
-Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
+Copyright (c) 2006-2010 Keith Morrison <keithm@infused.org>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
