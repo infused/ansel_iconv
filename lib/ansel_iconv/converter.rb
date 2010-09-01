@@ -22,15 +22,15 @@ module ANSEL
           output << byte
         elsif char >= 0x88 && char <= 0xC8
           hex_key = char.to_s(16).upcase
-          output << ::Iconv.conv(@to_charset, 'UTF-16', @ansi_to_utf8.has_key?(hex_key) ? @ansi_to_utf8[hex_key] : @ansi_to_utf8['ERR'])
+          output << ::Iconv.conv(@to_charset, 'UTF-16', ansi_to_utf8[hex_key] || ansi_to_utf8['ERR'])
           scanner.get_byte # ignore the next byte
         elsif char >= 0xE0 && char <= 0xFB
           [2, 1, 0].each do |n| # try 3 bytes, then 2 bytes, then 1 byte
             bytes = [char.to_s(16).upcase]
             scanner.peek(n).each_byte {|b| bytes << b.to_s(16).upcase}
-            hex_key = bytes.join("+")
-            if @ansi_to_utf8.has_key?(hex_key)  
-              output << ::Iconv.conv(@to_charset, 'UTF-16', @ansi_to_utf8[hex_key])
+            hex_key = bytes.join('+')
+            if ansi_to_utf8.has_key?(hex_key)  
+              output << ::Iconv.conv(@to_charset, 'UTF-16', ansi_to_utf8[hex_key])
               n.times {scanner.get_byte}
               break
             end
