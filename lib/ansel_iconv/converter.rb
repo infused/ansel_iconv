@@ -6,9 +6,10 @@ module ANSEL
     
     def initialize(to_charset = 'UTF-8')
       @to_charset = to_charset
-      @ansi_to_utf8 = {}
-      @ansi_to_utf8.merge!(@@non_combining)
-      @ansi_to_utf8.merge!(@@combining)
+    end
+    
+    def ansi_to_utf8
+      @ansi_to_utf8 ||= @@non_combining.merge(@@combining)
     end
 
     def iconv(string)
@@ -36,7 +37,7 @@ module ANSEL
             end
           end
         else
-          output << ::Iconv.conv(@to_charset, 'UTF-16', @ansi_to_utf8['ERR'])
+          output << ::Iconv.conv(@to_charset, 'UTF-16', ansi_to_utf8['ERR'])
           scanner.get_byte if scanner.get_byte.unpack('C')[0] >= 0xE0 # ignore the next byte
         end
       end
