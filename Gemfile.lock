@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    ansel_iconv (1.1.5)
+      activesupport (>= 2.3.5, <= 2.3.8)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activesupport (2.3.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport (>= 2.3.5, <= 2.3.8)
+  ansel_iconv!
