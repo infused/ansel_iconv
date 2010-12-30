@@ -14,13 +14,13 @@ Gem::Specification.new do |s|
   s.description = 'Convert ANSEL encoded text to any other encoding available to Iconv'
 
   s.rdoc_options = ['--charset=UTF-8']
-  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md']
+  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'MIT-LICENSE']
   s.files = Dir['[A-Z]*', '{lib,test}/**/*']
   s.test_files = Dir.glob('test/**/*_test.rb')
   s.require_paths = ['lib']
   
   s.required_rubygems_version = '>= 1.3.0'
-  s.add_dependency 'activesupport', '~> 2.3.8'
-  s.add_development_dependency 'shoulda', '~> 2.11.3'
+  s.add_dependency 'activesupport', '~> 2.3.10'
+  s.add_development_dependency 'rspec', '~> 2.3.0'
 end
 

@@ -1,9 +1,8 @@
-# encoding: ascii-8bit
+# encoding: utf-8
 
-$:.unshift(File.dirname(__FILE__) + "/../lib/")
+$:.unshift(File.dirname(__FILE__) + '/../lib/')
 require 'rubygems'
-require 'test/unit'
-require 'shoulda'
+require 'rspec'
 require 'ansel_iconv'
 
 if RUBY_VERSION < '1.9'
@@ -12,4 +11,8 @@ if RUBY_VERSION < '1.9'
       self
     end
   end
+end
+
+RSpec.configure do |config|
+  
 end
