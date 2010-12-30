@@ -1,3 +1,5 @@
 module ANSEL
-  VERSION = '1.1.5'
+  class Iconv
+    VERSION = '1.1.5'
+  end
 end
