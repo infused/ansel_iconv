@@ -1,4 +1,4 @@
-# encoding: utf-8
+# encoding: ascii-8bit
 
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   
   s.required_rubygems_version = '>= 1.3.0'
-  s.add_dependency 'activesupport', '~> 2.3.10'
   s.add_development_dependency 'rspec', '~> 2.3.0'
 end
 

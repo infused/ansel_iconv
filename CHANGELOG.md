@@ -1,3 +1,9 @@
+## 1.1.6
+
+- Remove dependency on activesupport
+- Remove dependency on jeweler
+- Migrate test suite to Rspec2
+
 ## 1.1.4
 
 - New gemspec and Rakefile

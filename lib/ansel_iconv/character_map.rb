@@ -1,3 +1,5 @@
+# encoding: ascii-8bit
+
 module ANSEL
   module CharacterMap
     @@non_combining = {
