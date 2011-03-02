@@ -2,7 +2,7 @@
 
 ANSEL::Iconv is a wrapper for Iconv that adds ANSEL character set conversion.
 
-Copyright (c) 2006-2010 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
+Copyright (c) 2006-2011 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
 
 - Project page: <http://github.com/infused/ansel_iconv>
 - API Documentation: <http://rubydoc.info/github/infused/ansel_iconv/frames>
@@ -49,7 +49,7 @@ standard.
 
 ## LICENSE:
 
-Copyright (c) 2006-2010 Keith Morrison <keithm@infused.org>
+Copyright (c) 2006-2011 Keith Morrison <keithm@infused.org>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
