@@ -19,13 +19,14 @@ module ANSEL
         byte = scanner.get_byte
         char = byte.unpack('C')[0]
     
-        if char <= 0x7F
+        case char
+        when 0x00..0x7F
           output << byte
-        elsif char >= 0x88 && char <= 0xC8
+        when 0x88..0xC8
           hex_key = char.to_s(16).upcase
           output << ::Iconv.conv(@to_charset, 'UTF-16', ansi_to_utf8[hex_key] || ansi_to_utf8['ERR'])
           scanner.get_byte # ignore the next byte
-        elsif char >= 0xE0 && char <= 0xFB
+        when 0xE0..0xFB
           [2, 1, 0].each do |n| # try 3 bytes, then 2 bytes, then 1 byte
             bytes = [char.to_s(16).upcase]
             scanner.peek(n).each_byte {|b| bytes << b.to_s(16).upcase}
