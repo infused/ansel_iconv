@@ -15,11 +15,12 @@ Gem::Specification.new do |s|
 
   s.rdoc_options = ['--charset=UTF-8']
   s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'MIT-LICENSE']
-  s.files = Dir['[A-Z]*', '{lib,test}/**/*']
+  s.files = Dir['[A-Z]*', '{lib,test}/**/*', 'ansel_iconv.gemspec']
   s.test_files = Dir.glob('test/**/*_test.rb')
   s.require_paths = ['lib']
   
   s.required_rubygems_version = '>= 1.3.0'
   s.add_development_dependency 'rspec', '~> 2.5.0'
+  s.add_development_dependency 'rake', '~> 0.9.2'
 end
 
