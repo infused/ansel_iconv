@@ -9,34 +9,35 @@ Copyright (c) 2006-2012 Keith Morrison <mailto:keithm@infused.org>, <http://www.
 - Report bugs: <http://github.com/infused/ansel_iconv/issues>
 - Questions? Email [keithm@infused.org](mailto:keithm@infused.org?subject=ANSEL::Iconv)
   with ANSEL::Iconv in the subject line
-  
+
 ## Compatibility
 
-ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7, 1.9.2, and 1.9.3
+ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7, 1.9.2, and 1.9.3. Ruby must
+be compiled with iconv support.
 
 ## Installation
 
     gem install ansel_iconv
-    
+
 ## Basic Usage
 
-Conversion from ANSEL to any other encoding is fully supported, but you cannot 
+Conversion from ANSEL to any other encoding is fully supported, but you cannot
 convert to ANSEL from another encoding. Two-way encoding may be added
 in the future.
-    
+
     require 'ansel_iconv'
-    
+
     # convert ANSEL to UTF-8
     converter = ANSEL::Iconv.new 'UTF-8'
     converter.iconv("\xB9\x004.59") # => "£4.59"
-    
+
 You can use ANSEL::Iconv as a replacement for the built-in Iconv, because
 non-ANSEL conversions are simply passed through to Iconv.
 
     # convert UTF-8 to UTF-16
     converter = ANSEL::Iconv.new 'UTF-16', 'UTF-8'
     converter.iconv("£4.59") # => "\376\377\000\243\0004\000.\0005\0009"
-  
+
 ## About the ANSEL character set
 
 [ANSI/NISO
@@ -49,7 +50,7 @@ standard.
 
 ## LICENSE:
 
-Copyright (c) 2006-2012 Keith Morrison <keithm@infused.org>
+Copyright (c) 2006-2014 Keith Morrison <keithm@infused.org>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
