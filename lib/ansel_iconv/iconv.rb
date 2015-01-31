@@ -6,8 +6,8 @@ module ANSEL
       @converter = Convert.new(to)
     end
 
-    def iconv(*args)
-      @converter.iconv(*args)
+    def convert(*args)
+      @converter.convert(*args)
     end
   end
 end

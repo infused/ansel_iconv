@@ -12,7 +12,7 @@ module ANSEL
       @ansi_to_utf8 ||= @@non_combining.merge(@@combining)
     end
 
-    def iconv(string)
+    def convert(string)
       output = ''
       scanner = StringScanner.new(string)
       until scanner.eos? do
