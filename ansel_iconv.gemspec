@@ -18,9 +18,8 @@ Gem::Specification.new do |s|
   s.files = Dir['[A-Z]*', '{lib,test}/**/*', 'ansel_iconv.gemspec']
   s.test_files = Dir.glob('test/**/*_test.rb')
   s.require_paths = ['lib']
-  
-  s.required_rubygems_version = '>= 1.3.6'
+
+  s.required_rubygems_version = '>= 1.8.25'
   s.add_development_dependency 'rspec', '~> 2.10.0'
   s.add_development_dependency 'rake', '~> 0.9.2'
 end
-

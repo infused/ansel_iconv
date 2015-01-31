@@ -6,19 +6,19 @@ describe ANSEL::Iconv do
   before do
     @ansel = ANSEL::Iconv.new 'UTF-8'
   end
-  
+
   describe '#iconv' do
-  
+
     it "does not convert ASCII characters" do
       @ansel.iconv("\x20").should == ' '
       @ansel.iconv("\x78").should == 'x'
     end
-  
+
     it 'converts invalid characters to the unicode replacement character' do
       @ansel.iconv("\xBE\x00").should == "�".force_encoding('utf-8')
       @ansel.iconv("\xD1\x00").should == "�".force_encoding('utf-8')
     end
-  
+
     it 'converts valid ANSEL characters to UTF-8 equivalents' do
       # ANSEL non-combining mappings
       @ansel.iconv("\x88\x00").should == ''
@@ -62,7 +62,7 @@ describe ANSEL::Iconv do
       @ansel.iconv("\xC6\x00").should == "¡".force_encoding('utf-8')
       @ansel.iconv("\xC7\x00").should == "ß".force_encoding('utf-8')
       @ansel.iconv("\xC8\x00").should == "€".force_encoding('utf-8')
-    
+
       # ANSEL combining characters
       @ansel.iconv("\xE0\x41").should == "Ả".force_encoding('utf-8')
       @ansel.iconv("\xF6\x4C").should == "Ḻ".force_encoding('utf-8')
@@ -73,7 +73,7 @@ describe ANSEL::Iconv do
       @ansel.iconv("\xF2\x79").should == "ỵ".force_encoding('utf-8')
       @ansel.iconv("\xF2").should == "̣".force_encoding('utf-8')
     end
-    
+
     it "converts full text correctly" do
       @ansel.iconv("What is the question?").should == "What is the question?"
       @ansel.iconv("\xC5\x00What is the question?").should == "¿What is the question?".force_encoding('utf-8')
@@ -81,24 +81,5 @@ describe ANSEL::Iconv do
       @ansel.iconv("\xB9\x004.59").should == "£4.59".force_encoding('utf-8')
     end
 
-    it "converts ANSEL to UTF-16" do
-      converter = ANSEL::Iconv.new 'UTF-16', 'ANSEL'
-      converter.iconv('abc').should == "\376\377\000a\000b\000c"
-    end
-
-    it "converts ASCII to UTF-16" do
-      converter = ANSEL::Iconv.new 'UTF-16', 'ASCII'
-      converter.iconv('abc').should == "\376\377\000a\000b\000c"
-    end
-
-    it "converts UTF-8 to UTF-16" do
-      converter = ANSEL::Iconv.new 'UTF-16', 'UTF-8'
-      converter.iconv('abc').should == "\376\377\000a\000b\000c"
-    end
-
-    it "converts UTF-16 to UTF-16" do
-      converter = ANSEL::Iconv.new 'UTF-16', 'UTF-16'
-      converter.iconv("\376\377\000a\000b\000c").should == "\376\377\000a\000b\000c"
-    end
   end
 end
