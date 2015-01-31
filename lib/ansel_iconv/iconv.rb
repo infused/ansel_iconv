@@ -3,7 +3,7 @@
 module ANSEL
   class Iconv
     def initialize(to, from = 'ANSEL')
-      @converter = Convert.new(to)
+      @converter = Converter.new(to)
     end
 
     def convert(*args)

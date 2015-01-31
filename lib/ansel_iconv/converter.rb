@@ -1,7 +1,7 @@
 # encoding: ascii-8bit
 
 module ANSEL
-  class Convert
+  class Converter
     include ANSEL::CharacterMap
 
     def initialize(to_charset = 'UTF-8')
