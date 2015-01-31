@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe ANSEL::Iconv do
   before do
-    @ansel = ANSEL::Iconv.new 'UTF-8'
+    @ansel = ANSEL::Converter.new
   end
 
   describe '#iconv' do
