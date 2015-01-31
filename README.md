@@ -1,8 +1,13 @@
 # ANSEL::Iconv
 
+[![Version](http://img.shields.io/gem/v/ansel_iconv.svg?style=flat)](https://rubygems.org/gems/ansel_iconv)
+[![Build Status](http://img.shields.io/travis/infused/ansel_iconv/master.svg?style=flat)](http://travis-ci.org/infused/ansel_iconv)
+[![Code Quality](http://img.shields.io/codeclimate/github/infused/ansel_iconv.svg?style=flat)](https://codeclimate.com/github/infused/ansel_iconv)
+
+
 ANSEL::Iconv is a wrapper for Iconv that adds ANSEL character set conversion.
 
-Copyright (c) 2006-2012 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
+Copyright (c) 2006-2015 Keith Morrison <mailto:keithm@infused.org>, <http://www.infused.org>
 
 - Project page: <http://github.com/infused/ansel_iconv>
 - API Documentation: <http://rubydoc.info/github/infused/ansel_iconv/frames>
@@ -12,8 +17,10 @@ Copyright (c) 2006-2012 Keith Morrison <mailto:keithm@infused.org>, <http://www.
 
 ## Compatibility
 
-ANSEL::Iconv is compatible with Ruby 1.8.6, 1.8.7, 1.9.2, and 1.9.3. Ruby must
+ANSEL::Iconv is compatible with Ruby 1.8.6 and 1.8.7. Ruby must
 be compiled with iconv support.
+
+For ANSEL conversion under Ruby 1.9 and higher see my [ANSEL](https://github.com/infused/ansel) gem.
 
 ## Installation
 
@@ -50,7 +57,7 @@ standard.
 
 ## LICENSE:
 
-Copyright (c) 2006-2014 Keith Morrison <keithm@infused.org>
+Copyright (c) 2006-2015 Keith Morrison <keithm@infused.org>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
