@@ -14,5 +14,5 @@ if RUBY_VERSION < '1.9'
 end
 
 RSpec.configure do |config|
-  
+
 end
