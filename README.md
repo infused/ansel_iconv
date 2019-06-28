@@ -2,7 +2,7 @@
 
 [![Version](http://img.shields.io/gem/v/ansel_iconv.svg?style=flat)](https://rubygems.org/gems/ansel_iconv)
 [![Build Status](http://img.shields.io/travis/infused/ansel_iconv/master.svg?style=flat)](http://travis-ci.org/infused/ansel_iconv)
-[![Code Quality](http://img.shields.io/codeclimate/github/infused/ansel_iconv.svg?style=flat)](https://codeclimate.com/github/infused/ansel_iconv)
+[![Code Quality](http://img.shields.io/codeclimate/maintainability/infused/ansel_iconv.svg?style=flat)](https://codeclimate.com/github/infused/ansel_iconv)
 [![License](https://img.shields.io/github/license/infused/ansel_iconv.svg)](https://github.com/infused/ansel_iconv)
 
 
