@@ -14,9 +14,8 @@ Gem::Specification.new do |s|
   s.description = 'Convert ANSEL encoded text to any other encoding available to Iconv'
 
   s.rdoc_options = ['--charset=UTF-8']
-  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'MIT-LICENSE']
-  s.files = Dir['[A-Z]*', '{lib,test}/**/*', 'ansel_iconv.gemspec']
-  s.test_files = Dir.glob('test/**/*_test.rb')
+  s.extra_rdoc_files = ['README.md', 'CHANGELOG.md', 'LICENSE']
+  s.files = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'ansel_iconv.gemspec']
   s.require_paths = ['lib']
   
   s.required_rubygems_version = '>= 1.3.6'

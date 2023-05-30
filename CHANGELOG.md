@@ -1,3 +1,6 @@
+## 1.1.7
+Exclude unnecessary files from the gem
+
 ## 1.1.6
 
 - Remove dependency on activesupport
